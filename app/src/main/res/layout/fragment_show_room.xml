@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ShowRoomFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="ShowRoom Jaya Abadi"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/textNama"
+            android:layout_width="279dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="24dp"
+            android:hint="Masukkan Nama anda"
+            app:layout_constraintBottom_toTopOf="@+id/textMotor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/textMotor"
+            android:layout_width="281dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="24dp"
+            android:hint="Masukkan Nama Motor"
+            app:layout_constraintBottom_toTopOf="@+id/textJumlah"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/textJumlah"
+            android:layout_width="281dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="24dp"
+            android:hint="Masukkan Jumlah Pemesanan"
+            app:layout_constraintBottom_toTopOf="@+id/textHp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/textHp"
+            android:layout_width="281dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="24dp"
+            android:hint="Masukkan Nomer Handphone"
+            app:layout_constraintBottom_toTopOf="@+id/textAlamat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/textAlamat"
+            android:layout_width="283dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="79dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Masukkan Alamat"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="265dp"
+            android:layout_marginBottom="188dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
