@@ -54,7 +54,7 @@
             android:layout_marginStart="53dp"
             android:layout_marginEnd="79dp"
             android:layout_marginBottom="24dp"
-            android:hint="Masukkan Jumlah Pemesanan"
+            android:hint="Jumlah Pemesanan"
             app:layout_constraintBottom_toTopOf="@+id/textHp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -66,7 +66,7 @@
             android:layout_marginStart="53dp"
             android:layout_marginEnd="79dp"
             android:layout_marginBottom="24dp"
-            android:hint="Masukkan Nomer Handphone"
+            android:hint="Masukkan Nomer HP"
             app:layout_constraintBottom_toTopOf="@+id/textAlamat"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

@@ -31,6 +31,10 @@ public class ShowRoomActivity implements Parcelable {
         return motor;
     }
 
+    public int getJumlah(){
+        return jumlah;
+    }
+
     public ShowRoomActivity(String nama, String motor, int jumlah, int hp, String alamat){
         this.nama = nama;
         this.motor = motor;
@@ -59,10 +63,6 @@ public class ShowRoomActivity implements Parcelable {
             return new ShowRoomActivity[size];
         }
     };
-
-    public int getJumlah(){
-        return jumlah;
-    }
 
     @Override
     public int describeContents() {
