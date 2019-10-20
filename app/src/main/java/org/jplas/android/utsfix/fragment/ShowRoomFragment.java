@@ -24,10 +24,8 @@ import org.jplas.android.utsfix.activty.ShowRoomActivity;
 public class ShowRoomFragment extends Fragment implements View.OnClickListener {
 
 
-
     View view;
     Button submit;
-    RadioGroup radio;
     EditText namaText, motorText, jumlahText, hpText, alamatText;
 
 
@@ -42,7 +40,6 @@ public class ShowRoomFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_show_room, container, false);
 
-        radio = view.findViewById(R.id.radio);
         namaText = view.findViewById(R.id.textNama);
         motorText = view.findViewById(R.id.textMotor);
         jumlahText = view.findViewById(R.id.textJumlah);
@@ -62,17 +59,16 @@ public class ShowRoomFragment extends Fragment implements View.OnClickListener {
         int hp = Integer.parseInt(hpText.getText().toString());
         String alamat = alamatText.getText().toString();
 
-            ShowRoomActivity kenal = new ShowRoomActivity(nama, motor, jumlah,hp,alamat);
-            Bundle args = new Bundle();
-            args.putParcelable("kenal", kenal);
-            Fragment Kalimat = new ShowRoomFragment();
-            Kalimat.setArguments(args);
-            FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragmenContainer, Kalimat);
-            fragmentTransaction.commit();
-        }else {
+        ShowRoomActivity pesan = new ShowRoomActivity(nama, motor, jumlah, hp, alamat);
+        Bundle args = new Bundle();
+        args.putParcelable("pesan", pesan);
+        Fragment Tampil = new ShowRoomFragment();
+        Tampil.setArguments(args);
+        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragmenContainer, Tampil);
+        fragmentTransaction.commit();
             Toast.makeText(getActivity(), "Please select equipment and your name !", Toast.LENGTH_SHORT).show();
         }
-    }
-
 }
+
+

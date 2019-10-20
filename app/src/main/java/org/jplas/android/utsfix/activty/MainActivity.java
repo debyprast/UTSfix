@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.action_pesan:
                 fragment = new ShowRoomFragment();
                 break;
+            case R.id.action_info:
+                fragment = new ShowRoomFragment();
+                break;
         }
         return loadFragment(fragment);
     }
