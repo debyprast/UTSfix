@@ -2,15 +2,15 @@ package org.jplas.android.utsfix.fragment;
 
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import org.jplas.android.utsfix.R;
+import org.jplas.android.utsfix.activty.ShowRoomActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,7 +18,7 @@ import org.jplas.android.utsfix.R;
 public class TampilFragment extends Fragment {
 
     View view;
-    ShowRoomFragment item;
+    ShowRoomActivity items;
 
     public TampilFragment() {
         // Required empty public constructor
@@ -33,8 +33,8 @@ public class TampilFragment extends Fragment {
         TextView textView = (TextView) view.findViewById(R.id.textData);
         Bundle data = this.getArguments();
 
-        item = data.getParcelable("pesan");
-        String dat = item.getNama()+" Total biaya anda "+items.getType();
+        items = data.getParcelable("pesan");
+        String dat = items.getNama()+" Akan membeli motor"+ items.getMotor()+" sejumlah "+items.getJumlah()+"pihak kami akan menghubungi nomer hp anda"+items.getHp()+"dan akan dikirim ke alamat anda"+items.getAlamat();
         textView.setText(dat);
 
         return view;

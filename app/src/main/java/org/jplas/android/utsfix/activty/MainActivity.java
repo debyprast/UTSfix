@@ -1,15 +1,16 @@
 package org.jplas.android.utsfix.activty;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jplas.android.utsfix.R;
+import org.jplas.android.utsfix.fragment.MotorFragment;
 import org.jplas.android.utsfix.fragment.ShowRoomFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new ShowRoomFragment();
                 break;
             case R.id.action_info:
-                fragment = new ShowRoomFragment();
+                fragment = new MotorFragment();
                 break;
         }
         return loadFragment(fragment);

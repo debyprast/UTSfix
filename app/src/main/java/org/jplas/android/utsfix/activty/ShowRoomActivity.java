@@ -1,8 +1,5 @@
 package org.jplas.android.utsfix.activty;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 

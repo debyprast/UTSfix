@@ -2,18 +2,15 @@ package org.jplas.android.utsfix.fragment;
 
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import org.jplas.android.utsfix.R;
 import org.jplas.android.utsfix.activty.ShowRoomActivity;
@@ -27,7 +24,6 @@ public class ShowRoomFragment extends Fragment implements View.OnClickListener {
     View view;
     Button submit;
     EditText namaText, motorText, jumlahText, hpText, alamatText;
-
 
     public ShowRoomFragment() {
         // Required empty public constructor
