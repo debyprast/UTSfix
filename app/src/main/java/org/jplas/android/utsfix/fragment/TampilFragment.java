@@ -19,6 +19,7 @@ public class TampilFragment extends Fragment {
 
     View view;
     ShowRoomActivity items;
+    TextView namaText, motorText, jumlahText, hpText, alamatText;
 
     public TampilFragment() {
         // Required empty public constructor
@@ -30,15 +31,24 @@ public class TampilFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_tampil, container, false);
-        TextView textView = (TextView) view.findViewById(R.id.textData);
-        Bundle data = this.getArguments();
+//        TextView textView = (TextView) view.findViewById(R.id.textData);
+//        Bundle data = this.getArguments();
 
-        items = data.getParcelable("pesan");
-        String dat = items.getNama()+" Akan membeli motor"+ items.getMotor()+" sejumlah "+items.getJumlah()+"pihak kami akan menghubungi nomer hp anda"+items.getHp()+"dan akan dikirim ke alamat anda"+items.getAlamat();
-        textView.setText(dat);
+        namaText = view.findViewById(R.id.nama);
+        motorText = view.findViewById(R.id.motor);
+        jumlahText = view.findViewById(R.id.jumlah);
+        hpText = view.findViewById(R.id.hp);
+        alamatText = view.findViewById(R.id.alamat);
+
+        Bundle bl = this.getArguments();
+        items = bl.getParcelable("ShowRoomActivity");
+        namaText.setText(items.getNama());
+        motorText.setText(items.getMotor());
+        jumlahText.setText(String.valueOf(items.getJumlah()));
+        hpText.setText(String.valueOf(items.getHp()));
+        alamatText.setText(items.getAlamat());
 
         return view;
-
     }
 
 }
