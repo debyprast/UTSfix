@@ -16,6 +16,16 @@ public class ShowRoomActivity implements Parcelable {
         return nama;
     }
 
+    public String getMotor() {
+        return motor;
+    }
+
+    public int getJumlah(){
+
+        return jumlah;
+    }
+
+
     public int getHp() {
         return hp;
     }
@@ -24,13 +34,7 @@ public class ShowRoomActivity implements Parcelable {
         return alamat;
     }
 
-    public String getMotor() {
-        return motor;
-    }
 
-    public int getJumlah(){
-        return jumlah;
-    }
 
     public ShowRoomActivity(String nama, String motor, int jumlah, int hp, String alamat){
         this.nama = nama;
@@ -48,7 +52,7 @@ public class ShowRoomActivity implements Parcelable {
         alamat = in.readString();
     }
 
-    public static final Parcelable.Creator<ShowRoomActivity> CREATOR = new Parcelable.Creator<ShowRoomActivity>() {
+    public static final Creator<ShowRoomActivity> CREATOR = new Creator<ShowRoomActivity>() {
 
         @Override
         public ShowRoomActivity createFromParcel(Parcel in) {

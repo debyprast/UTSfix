@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -41,9 +40,8 @@ public class ShowRoomFragment extends Fragment implements View.OnClickListener {
         jumlahText = view.findViewById(R.id.textJumlah);
         hpText = view.findViewById(R.id.textHp);
         alamatText = view.findViewById(R.id.textAlamat);
-        submit = (Button) view.findViewById(R.id.button);
+        submit = view.findViewById(R.id.button);
         submit.setOnClickListener(this);
-
         return view;
     }
 
@@ -56,14 +54,14 @@ public class ShowRoomFragment extends Fragment implements View.OnClickListener {
         String alamat = alamatText.getText().toString();
 
         ShowRoomActivity pesan = new ShowRoomActivity(nama, motor, jumlah, hp, alamat);
-        Bundle args = new Bundle();
-        args.putParcelable("pesan", pesan);
-        Fragment Tampil = new ShowRoomFragment();
-        Tampil.setArguments(args);
+        Bundle bl= new Bundle();
+        bl.putParcelable("ShowRoomActivity", pesan);
+        Fragment Result = new TampilFragment();
+        Result.setArguments(bl);
         FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragmenContainer, Tampil);
+        fragmentTransaction.replace(R.id.fragmenContainer, Result);
         fragmentTransaction.commit();
-            Toast.makeText(getActivity(), "Please select equipment and your name !", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "Please select equipment and your name !", Toast.LENGTH_SHORT).show();
         }
 }
 
